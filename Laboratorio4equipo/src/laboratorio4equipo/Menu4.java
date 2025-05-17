@@ -83,6 +83,7 @@ public class Menu4 {
                             palabra = "";
                         }
                     }
+                    break;
                 case 3:
                     boolean salir = false;
 
@@ -94,7 +95,7 @@ public class Menu4 {
                         int opcion = input.nextInt();
 
                         switch (opcion) {
-                            case 1: {
+                            case 1: 
                                 System.out.print("Ingrese el texto a encriptar: ");
                                 palabra = input.next();
                                 String par = "";
@@ -109,13 +110,12 @@ public class Menu4 {
                                 String encriptado = par + impar;
                                 System.out.println("La palabra encriptada es: " + encriptado);
                                 break;
-                            }
-                            case 2: {
+                            case 2: 
                                 System.out.print("Ingrese el texto a desencriptar: ");
                                 palabra = input.next();
                                 String original = "";
                                 int mitad = palabra.length() / 2;
-                                String par = "", impar = "";
+                                par = ""; impar = "";
                                 for (int i = 0; i < palabra.length(); i++) {
                                     if (i < mitad) {
                                         par += palabra.charAt(i);
@@ -132,21 +132,23 @@ public class Menu4 {
                                 }
                                 System.out.println("La palabra desencriptada es: " + original);
                                 break;
-                            }
+                            
                             case 3:
                                 salir = true;
                                 System.out.println("Saliendo...");
                                 break;
                             default:
-                                System.out.println("Opcion inválida.");
+                                System.out.println("Opcion invalida.");
                                 break;
                         }
                     }
+                    break;
                 case 4:
                     entrar = false;
                     System.out.println("Saliendo...");
+                    break;
                 default:
-                    System.out.println("Opcion inválida.");
+                    System.out.println("Opcion invalida.");
                     break;    
 
             }

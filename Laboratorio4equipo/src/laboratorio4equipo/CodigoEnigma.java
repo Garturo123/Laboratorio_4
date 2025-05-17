@@ -15,7 +15,7 @@ public class CodigoEnigma {
             int opcion = input.nextInt();
 
             switch (opcion) {
-                case 1: {
+                case 1: 
                     System.out.print("Ingrese el texto a encriptar: ");
                     String palabra = input.next();
                     String par = "";
@@ -30,13 +30,13 @@ public class CodigoEnigma {
                     String encriptado = par + impar;
                     System.out.println("La palabra encriptada es: " + encriptado);
                     break;
-                }
-                case 2: {
+                
+                case 2: 
                     System.out.print("Ingrese el texto a desencriptar: ");
-                    String palabra = input.next();
+                    palabra = input.next();
                     String original = "";
                     int mitad = palabra.length() / 2;
-                    String par = "", impar = "";
+                    par = ""; impar = "";
                     for (int i = 0; i < palabra.length(); i++) {
                         if (i < mitad) {
                             par += palabra.charAt(i);
@@ -53,7 +53,7 @@ public class CodigoEnigma {
                     }
                     System.out.println("La palabra desencriptada es: " + original);
                     break;
-                }
+                
                 case 3:
                     salir = true;
                     System.out.println("Saliendo...");
